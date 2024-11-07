@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouTube Sentiment Analysis</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>YouTube Sentiment Analysis</h1>
+    <div id="form-container">
+        <form id="sentiment-form">
+            <label for="url">YouTube URL:</label>
+            <input type="text" id="url" name="url" required>
+            
+            <label for="info">Info about the video:</label>
+            <textarea id="info" name="info" rows="4" required></textarea>
+            
+            <button type="button" onclick="analyzeSentiment()">Analyze</button>
+        </form>
+    </div>
+    <div id="results-container" style="display: none;">
+        <h2>Sentiment Analysis Results:</h2>
+        <ul id="results"></ul>
+    </div>
+    <script src="{{ url_for('static', filename='scripts.js') }}"></script>
+</body>
+</html>
