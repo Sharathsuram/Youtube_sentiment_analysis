@@ -1,0 +1,6 @@
+pandas
+selenium
+pytube
+google-api-python-client
+Flask
+google-generativeai
